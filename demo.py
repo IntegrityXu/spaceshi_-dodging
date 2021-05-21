@@ -20,7 +20,7 @@ def main(stdscr, args):
     #leave space for score
     sw = args.canvas_width - 10
    
-    difference = [[70000, 6],[50000, 5],[20000, 4]]
+    difference = [[50000, 6],[30000, 5],[20000, 4]]
     #the speed of generating obsttacles, according to different level
     speed, div = difference[args.diff_level - 1]
 
@@ -75,9 +75,9 @@ def main(stdscr, args):
 parse = argparse.ArgumentParser()
 
 parse.add_argument("--canvas_height", type = int, default = 20, 
-                    help="the height of game area")
+                    help="the height of game area, need a integer")
 parse.add_argument("--canvas_width", type = int, default = 50, 
-                    help="the width of game arrea")
+                    help="the width of game arrea, need a integer")
 parse.add_argument("--diff_level", type = int, default = 1, choices=[1, 2, 3],
                     help="")
 
