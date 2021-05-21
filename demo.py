@@ -20,11 +20,11 @@ def main(stdscr, args):
     #leave space for score
     sw = args.canvas_width - 10
    
-    difference = [70000,50000,20000]
+    difference = [[70000, 6],[50000, 5],[20000, 4]]
     #the speed of generating obsttacles, according to different level
-    speed = difference[args.diff_level - 1]
+    speed, div = difference[args.diff_level - 1]
 
-    obstacle = Obstacle(sw, sh)
+    obstacle = Obstacle(sw, sh, div)
     ship = Ship(sh, sw, begin_x, begin_y)
 
     stdscr.addstr(ship.location[0], ship.location[1], "*")
